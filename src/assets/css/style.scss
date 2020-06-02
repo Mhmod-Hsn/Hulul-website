@@ -1,0 +1,179 @@
+/**********************
+      Imports
+***********************/
+
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+
+/**********************
+      variables
+***********************/
+$theme-colors: (
+  primary: #2e5888,
+  secondary: #f68735,
+  light-blue: #eef6ff,
+  transparent: rgba(0,0,0,0)
+);
+:root{
+  --primary: map-get($theme-colors,primary);
+  --secondary: map-get($theme-colors,secondary);
+
+}
+$body-bg: #fff;
+
+$body-color: map-get($theme-colors,primary);
+
+$font-family-sans-serif: 'Cairo',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$link-hover-decoration: none;
+
+// border radius
+$border-radius:               40px;
+$border-radius-lg:            40px;
+$border-radius-sm:            40px;
+
+
+// Navbar
+$navbar-light-color:                rgba(map-get($theme-colors,primary), .9);
+$navbar-light-hover-color:          rgba(map-get($theme-colors,primary), .95);
+$navbar-light-active-color:         rgba(map-get($theme-colors,primary), 1);
+$navbar-light-disabled-color:       rgba(map-get($theme-colors,primary), .5);
+
+
+
+// Bootstrap and its default variables
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+// BootstrapVue and its default variables
+@import "../../../node_modules/bootstrap-vue/src/index.scss";
+// import bootstrap rtl
+@import "rtl";
+
+/**********************
+      main classes
+***********************/
+.icon-only{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  height: 100%;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.btn:not(.btn-transparent){
+  color: #fff;
+}
+
+.container-fluid{
+  padding: 0 60px;
+}
+
+/**********************
+      Transition
+***********************/
+
+.fade-enter-active {
+  transition: opacity 1s
+}
+.fade-leave-active{
+   opacity: 0
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0
+}
+
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.5s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+
+.slide-fade-top-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-top-leave-active {
+  transition: all 0.5s ease;
+}
+.slide-fade-top-enter,
+.slide-fade-top-leave-to{
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+
+/**********************
+      Navbar
+***********************/
+
+nav{
+  .navbar-toggler{
+    outline: none;
+  }
+  .navbar-brand{
+    img{
+      width: 150px;
+    }
+  }
+  .navbar-nav{
+    .nav-item{
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-left: 0.6rem!important;
+      border-bottom:  3px solid transparent;
+      transition: all 0.3s ease;
+
+      &.router-link-exact-active{
+        border-bottom-color: map-get($theme-colors,secondary);
+      }
+    }
+  }
+
+  .login{
+    position: relative;
+
+    .login-popup{
+      position: absolute;
+      top: calc(100% + 20px);
+      left: 0;
+      width: 300px;
+    }
+  }
+}
+
+body{
+  padding-top: 77.4px;
+}
+
+
+
+@media (max-width: 767px) {
+  .navbar-nav{
+    padding: 0;
+  }
+
+  .login-popup{
+    left: 50%!important;
+    transform: translateX(-50%);
+  }
+
+  .search{
+    .icon-only{
+      margin-top: 15px;
+      justify-content: flex-start;
+    }
+    input{
+      margin: 0 10px;
+    }
+  }
+}
