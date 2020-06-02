@@ -19,7 +19,7 @@
 						</div>
 						<div class="col-md-6">
 							<div class="slide-img">
-								<img src="../../assets/images/slide1.png" class="d-block mx-auto img-fluid" :alt="slide.title">
+								<img :src="slide.img" class="d-block mx-auto img-fluid" :alt="slide.title">
 							</div>
 						</div>
 
@@ -50,27 +50,18 @@
           "dots": true,
           "dotsClass": "slick-dots custom-dot-class",
           "edgeFriction": 0.35,
-          "infinite": false,
+          "infinite": true,
           "speed": 500,
           "slidesToShow": 1,
           "slidesToScroll": 1,
           "autoplay": true,
-          arrows: true,
+          "arrows": true,
+          "fade": true,
 
         },
 	      slides:[
-		      {
-		        img:'../../assets/images/slide1.png',
-			      title:'حلول تكنولوجيا متطورة',
-			      title2:'نحو مستقبل أفضل',
-			      subtitle:'هدفنا في حلول تيك دائماً هو العمل على حلول وأفكار متطورة بمعايير عالمية تساهم في التقدم التقني بالوطن العربي',
-			      moreBtnText:'اعرف المزيد',
-			      moreBtnURL:'#',
-			      contactText:'تواصل معنا',
-			      contactURL:'#'
-		      },
           {
-            img:'../../assets/images/slide1.png',
+            img:require('@/static/images/slide1.png'),
             title:'حلول تكنولوجيا متطورة',
             title2:'نحو مستقبل أفضل',
             subtitle:'هدفنا في حلول تيك دائماً هو العمل على حلول وأفكار متطورة بمعايير عالمية تساهم في التقدم التقني بالوطن العربي',
@@ -78,7 +69,17 @@
             moreBtnURL:'#',
             contactText:'تواصل معنا',
             contactURL:'#'
-          }
+          },
+          {
+            img:require('@/static/images/slide2.png'),
+            title:'حلول تكنولوجيا متطورة',
+            title2:'نحو مستقبل أفضل',
+            subtitle:'هدفنا في حلول تيك دائماً هو العمل على حلول وأفكار متطورة بمعايير عالمية تساهم في التقدم التقني بالوطن العربي',
+            moreBtnText:'اعرف المزيد',
+            moreBtnURL:'#',
+            contactText:'تواصل معنا',
+            contactURL:'#'
+          },
 	      ]
       }
 	  }
@@ -86,7 +87,7 @@
 </script>
 
 <style lang="scss">
-.slick-slide {
+.slick-slide,#hero {
 	padding-bottom: 50px;
 	div {
 		outline: none;
