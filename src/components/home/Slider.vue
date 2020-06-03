@@ -1,6 +1,6 @@
 <template>
 	<div id="home-slider" class="container-fluid">
-		<div class="bg-light-blue">
+		<div class="bg-light-blue py-4">
 
 			<VueSlickCarousel v-bind="settings">
 				<div class="slide" v-for="(slide,index) in slides" :key="index">
@@ -87,7 +87,7 @@
 </script>
 
 <style lang="scss">
-.slick-slide,#hero {
+.slick-slide{
 	padding-bottom: 50px;
 	div {
 		outline: none;
@@ -102,7 +102,7 @@
 	}
 	.slide-text{
 		display: flex;
-		align-items: center;
+		align-items: start;
 		justify-content: center;
 		flex-flow: column;
 		height: 100%;

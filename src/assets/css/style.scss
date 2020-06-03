@@ -58,7 +58,7 @@ $navbar-light-disabled-color:       rgba(map-get($theme-colors,primary), .5);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: column;
+  flex-flow: row;
   text-align: center;
   height: 100%;
 }
@@ -158,6 +158,14 @@ body{
 }
 
 
+/**********************
+      Footer
+***********************/
+#footer{
+  .router-link-exact-active{
+    color: map-get($theme-colors,secondary);
+  }
+}
 
 @media (max-width: 767px) {
   .navbar-nav{
