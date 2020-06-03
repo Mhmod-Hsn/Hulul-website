@@ -320,13 +320,17 @@
       Additions
   *********************/
   // navbar
-  #localeSwitcher{
-    .dropdown-menu{
+  #localeSwitcher {
+    .dropdown-menu {
       left: 0;
       right: auto;
+      text-align: right;
+
+      img {
+        float: left;
+      }
     }
   }
-
 
 
   //  Slick slider

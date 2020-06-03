@@ -1,11 +1,42 @@
 .en,
 [dir="ltr"]{
 
+  nav,
+  #localeSwitcher *,
+  .btn,
+  a{
+    text-transform: capitalize;
+  }
+
+  nav {
+    .login {
+      .login-popup{
+        left: auto;
+        right: 0;
+      }
+    }
+  }
   #home-slider{
     .slick-slide{
       .row{
         flex-flow: row-reverse;
       }
+    }
+  }
+
+  #localeSwitcher .dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: left;
+
+    img{
+      float: right;
+    }
+  }
+
+  #services{
+    .fa-angle-left{
+      transform: rotate(180deg);
     }
   }
 

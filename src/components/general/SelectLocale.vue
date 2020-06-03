@@ -1,5 +1,5 @@
 <template>
-	<b-dropdown id="localeSwitcher" :text="$i18n.locale">
+	<b-dropdown id="localeSwitcher"  :text="currentLang">
 		<b-dropdown-item
 			v-for="(lang, i) in langs"
 			:key="`lang-${i}`"
@@ -32,10 +32,11 @@
         ]
       }
 	  },
-	  methods:{
-      changeLocale(locale){
-        this.$i18n.locale = locale
-		  }
+	  computed:{
+      currentLang(){
+        return this.$i18n.locale
+
+      }
 	  }
   }
 </script>

@@ -25,15 +25,15 @@
 <script>
   export default {
     name: "Hero",
-	  data(){
-      return{
-        hero: {
+	  computed:{
+      hero(){
+        return {
           img:require('@/static/images/hero.png'),
-          title:'الخيار الأفضل لإدارة الفنادق على الإنترنت',
-          subtitle:'نظام فندقي هو اختيارك الأفضل لإدارة جميع عمليات التسكين وإدارة الغرف بكافة تفاصيلها بالإضافة إلى تقديم تقارير مفصلة عن الفندق',
-          moreBtnText:'اعرف المزيد',
+          title: this.$t('hero.title'),
+          subtitle: this.$t('hero.subtitle'),
+          moreBtnText: this.$t('actions.more'),
           moreBtnURL:'#',
-          contactText:'تواصل معنا',
+          contactText:this.$t('actions.contact-us'),
           contactURL:'#'
         }
       }

@@ -1,5 +1,5 @@
 <template>
-	<b-navbar toggleable="md" type="light" variant="white" fixed="top" class="container-fluid">
+	<b-navbar toggleable="lg" type="light" variant="white" fixed="top" class="container-fluid">
 			<router-link :to="{name: 'Home'}" class="cursor-pointer" tag="b-navbar-brand" >
 				<img src="./../../assets/Logo.png" alt="">
 			</router-link>

@@ -5,6 +5,10 @@
     "logout": "logout",
     "register": "register"
   },
+  "actions": {
+    "more": "more",
+    "contact-us": "Contact us"
+  },
   "navbar": {
     "home": "home",
     "about": "about",
@@ -20,6 +24,30 @@
     "projects": "@:navbar.projects",
     "contact": "@:navbar.contact",
     "copyrights": "All Copyrights reserved to Hulul Tech "
-
+  },
+  "slider": {
+    "slide": {
+      "title": "Advanced technology solutions",
+      "title2": "Towards a better future",
+      "subtitle": "Our goal in Tech solutions is always working on advanced solutions and ideas with international standards that contribute to the technical advancement in the Arab world"
+    }
+  },
+  "services": {
+    "service": {
+      "title":"Network and communication systems",
+      "subtitle":"We provide all low voltage services, networks, switches and audio systems",
+      "moreText":"More information"
+    }
+  },
+  "hero": {
+    "title": "The best option for managing hotels online",
+    "subtitle": "My hotel system is your best choice to manage all the housing operations and manage the rooms with all its details in addition to providing detailed reports about the hotel"
+  },
+  "projects": {
+    "title": "The most recent work we are proud of",
+    "project": {
+      "title": "Fonduki App"
+    }
   }
+
 }

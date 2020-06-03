@@ -12,8 +12,8 @@
 								</h1>
 								<p class="subtitle my-4">{{slide.subtitle}}</p>
 								<div class="actions">
-									<a :href="slide.moreBtnURL" class="btn btn-secondary mx-2 px-4">{{slide.moreBtnText}}</a>
-									<a :href="slide.contactURL" class="mx-2 px-4">{{slide.contactText}}</a>
+									<a :href="slide.moreBtnURL" class="btn btn-secondary mx-2 px-4">{{$t('actions.more')}}</a>
+									<a :href="slide.contactURL" class="mx-2 px-4">{{$t('actions.contact-us')}}</a>
 								</div>
 							</div>
 						</div>
@@ -58,28 +58,28 @@
           "arrows": true,
           "fade": true,
         },
-	      slides:[
+      }
+	  },
+	  computed:{
+      slides(){
+        return [
           {
             img:require('@/static/images/slide1.png'),
-            title:'حلول تكنولوجيا متطورة',
-            title2:'نحو مستقبل أفضل',
-            subtitle:'هدفنا في حلول تيك دائماً هو العمل على حلول وأفكار متطورة بمعايير عالمية تساهم في التقدم التقني بالوطن العربي',
-            moreBtnText:'اعرف المزيد',
+            title:this.$t('slider.slide.title'),
+            title2:this.$t('slider.slide.title2'),
+            subtitle:this.$t('slider.slide.subtitle'),
             moreBtnURL:'#',
-            contactText:'تواصل معنا',
             contactURL:'#'
           },
           {
             img:require('@/static/images/slide2.png'),
-            title:'حلول تكنولوجيا متطورة',
-            title2:'نحو مستقبل أفضل',
-            subtitle:'هدفنا في حلول تيك دائماً هو العمل على حلول وأفكار متطورة بمعايير عالمية تساهم في التقدم التقني بالوطن العربي',
-            moreBtnText:'اعرف المزيد',
+            title:this.$t('slider.slide.title'),
+            title2:this.$t('slider.slide.title2'),
+            subtitle:this.$t('slider.slide.subtitle'),
             moreBtnURL:'#',
-            contactText:'تواصل معنا',
             contactURL:'#'
           },
-	      ]
+        ]
       }
 	  }
   }

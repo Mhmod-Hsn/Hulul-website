@@ -1,7 +1,7 @@
 <template>
 	<div id="services" class="container-fluid">
 		<div class="row">
-			<div class="col-lg-3 col-md-6 col-sm-12" v-for="(service,index) in services" :key="index">
+			<div class="col-lg-3 col-md-6 col-sm-6 my-3" v-for="(service,index) in services" :key="index">
 				<div class="img-wrapper primary-gradient">
 					<img :src="service.img" :alt="service.title" class="mx-auto d-block img-fluid">
 				</div>
@@ -22,39 +22,40 @@
 <script>
   export default {
     name: "Services",
-	  data(){
-      return{
-        services:[
+	  computed:{
+      services(){
+        return [
           {
             img:require('@/static/images/service.png'),
-            title:'أنظمة الشبكات والاتصالات',
-            subtitle:'نوفر جميع خدمات الجهد المنخفضة والشبكات والسنترالات والأنظمة الصوتية',
-            moreText:'مزيد من المعلومات',
+            title:this.$t('services.service.title'),
+            subtitle:this.$t('services.service.subtitle'),
+            moreText:this.$t('services.service.moreText'),
             moreURL:'#'
           },
           {
             img:require('@/static/images/service.png'),
-            title:'أنظمة الشبكات والاتصالات',
-            subtitle:'نوفر جميع خدمات الجهد المنخفضة والشبكات والسنترالات والأنظمة سيب سيب سيب سيب يسب سيب يشسب شسيب شب الصوتية',
-            moreText:'مزيد من المعلومات',
+            title:this.$t('services.service.title'),
+            subtitle:this.$t('services.service.subtitle'),
+            moreText:this.$t('services.service.moreText'),
             moreURL:'#'
           },
           {
             img:require('@/static/images/service.png'),
-            title:'أنظمة الشبكات والاتصالات',
-            subtitle:'نوفر جميع خدمات الجهد المنخفضة والشبكات والسنترالات والأنظمة الصوتية',
-            moreText:'مزيد من المعلومات',
+            title:this.$t('services.service.title'),
+            subtitle:this.$t('services.service.subtitle'),
+            moreText:this.$t('services.service.moreText'),
             moreURL:'#'
           },
           {
             img:require('@/static/images/service.png'),
-            title:'أنظمة الشبكات والاتصالات',
-            subtitle:'نوفر جميع خدمات الجهد المنخفضة والشبكات والسنترالات والأنظمة الصوتية',
-            moreText:'مزيد من المعلومات',
+            title:this.$t('services.service.title'),
+            subtitle:this.$t('services.service.subtitle'),
+            moreText:this.$t('services.service.moreText'),
             moreURL:'#'
           },
         ]
       }
+
 	  }
   }
 </script>
