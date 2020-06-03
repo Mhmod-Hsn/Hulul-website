@@ -48,6 +48,17 @@
     "project": {
       "title": "تطبيق فندقي"
     }
+  },
+  "about-page":    {
+    "title": "عن حلول تيك"
+  },
+  "services-page": {
+    "title": "الخدمات"
+  },
+  "projects-page": {
+    "title": "المشاريع"
+  },
+  "contact-page":  {
+    "title": "اتصل بنا"
   }
-
 }

@@ -10,9 +10,9 @@
 				<b-navbar-nav>
 					<router-link exact tag="b-nav-item" :to="{name: 'Home'}"> {{ $t('navbar.home') }}</router-link>
 					<router-link exact tag="b-nav-item" :to="{name: 'About'}">{{ $t('navbar.about') }}</router-link>
-					<router-link exact tag="b-nav-item" :to="{name: 'About'}">{{ $t('navbar.services') }}</router-link>
-					<router-link exact tag="b-nav-item" :to="{name: 'About'}">{{ $t('navbar.projects') }}</router-link>
-					<router-link exact tag="b-nav-item" :to="{name: 'About'}">{{ $t('navbar.contact') }}</router-link>
+					<router-link exact tag="b-nav-item" :to="{name: 'Services'}">{{ $t('navbar.services') }}</router-link>
+					<router-link exact tag="b-nav-item" :to="{name: 'Projects'}">{{ $t('navbar.projects') }}</router-link>
+					<router-link exact tag="b-nav-item" :to="{name: 'Contact'}">{{ $t('navbar.contact') }}</router-link>
 				</b-navbar-nav>
 
 				<!-- Right aligned nav items -->

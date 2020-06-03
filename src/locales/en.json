@@ -48,6 +48,18 @@
     "project": {
       "title": "Fonduki App"
     }
+  },
+  "about-page":    {
+    "title": "About Hulul Tech"
+  },
+  "services-page": {
+    "title": "Services"
+  },
+  "projects-page": {
+    "title": "Proejcts"
+  },
+  "contact-page":  {
+    "title": "Contact us"
   }
 
 }

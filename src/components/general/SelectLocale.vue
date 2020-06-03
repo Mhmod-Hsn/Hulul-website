@@ -4,7 +4,7 @@
 			v-for="(lang, i) in langs"
 			:key="`lang-${i}`"
 			:value="lang.locale"
-			@click="$i18n.locale = lang.locale"
+			@click="switchLang(lang.locale)"
 		>
 			<img :src="lang.flag" width="30" alt=""> {{lang.name}}
 		</b-dropdown-item>
@@ -32,10 +32,20 @@
         ]
       }
 	  },
+	  methods:{
+      switchLang(locale){
+        // change language in global variable
+        this.$i18n.locale = locale
+
+	      // change router parameter
+	      this.$router.push({
+		      params:{ lang: locale }
+	      })
+      }
+	  },
 	  computed:{
       currentLang(){
         return this.$i18n.locale
-
       }
 	  }
   }
