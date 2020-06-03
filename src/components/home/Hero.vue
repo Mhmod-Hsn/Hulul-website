@@ -58,6 +58,31 @@
 		height: 100%;
 		width: 80%;
 	}
-
 }
+
+	@media (max-width: 992px) {
+		#hero{
+			.bg-light-blue{
+				padding: 0 5%;
+			}
+			.slider-text,
+			.hero-text{
+				margin: 30px auto;
+			}
+
+			.slide-img,
+			.hero-img{
+				max-height: 30vh;
+				width: auto;
+				display: block;
+				margin: auto;
+
+			}
+			.actions{
+				width: 100%;
+				display: block;
+				text-align: center;
+			}
+		}
+	}
 </style>

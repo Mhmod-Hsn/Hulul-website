@@ -1,5 +1,10 @@
 <template>
-	<b-dropdown id="localeSwitcher"  :text="currentLang">
+	<b-dropdown id="localeSwitcher">
+
+		<template slot="button-content">
+			<img :src="currentLang.flag" width="30" :alt='currentLang.name'> <small>{{currentLang.name}}</small>
+		</template>
+
 		<b-dropdown-item
 			v-for="(lang, i) in langs"
 			:key="`lang-${i}`"
@@ -34,18 +39,23 @@
 	  },
 	  methods:{
       switchLang(locale){
-        // change language in global variable
-        this.$i18n.locale = locale
+        if (this.$i18n.locale != locale){
+	        // change language in global variable
+	        this.$i18n.locale = locale
 
-	      // change router parameter
-	      this.$router.push({
-		      params:{ lang: locale }
-	      })
+		      // change router parameter
+		      this.$router.push({
+			      params:{ lang: locale }
+		      })
+        }
       }
 	  },
 	  computed:{
       currentLang(){
-        return this.$i18n.locale
+        let result = this.langs.find(lang => {
+          return lang.locale === this.$i18n.locale
+        })
+        return result
       }
 	  }
   }

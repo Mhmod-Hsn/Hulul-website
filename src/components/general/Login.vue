@@ -42,5 +42,14 @@
 </script>
 
 <style scoped>
+	.login-popup {
+		z-index: 999;
+	}
 
+	@media (max-width: 992px) {
+		.login-popup{
+			left: 50%!important;
+			transform: translateX(-50%);
+		}
+	}
 </style>

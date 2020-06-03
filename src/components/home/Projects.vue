@@ -8,12 +8,14 @@
 				:key="index"
 			>
 				<a :href="project.url">
-					<b-card class="bg-light-blue">
-						<div class="img-wrapper">
-							<img :src="project.img" class="img-fluid" :alt="project.name">
-						</div>
-						<h5 class="project-name text-center mb-1 mt-2 font-weight-bold">{{project.name}}</h5>
-				</b-card>
+					<div class="single-project">
+						<b-card class="bg-light-blue">
+							<div class="img-wrapper">
+								<img :src="project.img" class="img-fluid" :alt="project.name">
+							</div>
+							<h5 class="project-name text-center mb-1 mt-2 font-weight-bold">{{project.name}}</h5>
+						</b-card>
+					</div>
 				</a>
 
 			</div>
@@ -59,38 +61,53 @@
 </script>
 
 <style lang="scss" scoped>
-#projects{
-	.card {
-		border: 1px solid transparent;
-		transition: all 0.3s ease-in-out;
-		overflow: hidden;
-		.project-name{
+	#projects{
+		.card {
+			border: 1px solid transparent;
 			transition: all 0.3s ease-in-out;
-			opacity: 0;
-			transform: translateY(30px);
-		}
-		.img-wrapper {
-			background: #fff;
-			border-radius: 40px;
-			padding: 20px;
-
-			img {
-				display: block;
-				margin: auto;
-				height: 150px;
-			}
-		}
-
-		&:hover{
-			border-color: var(--secondary);
-
+			overflow: hidden;
 			.project-name{
-				opacity: 1;
-				transform: translateY(0);
+				transition: all 0.3s ease-in-out;
+				opacity: 0;
+				transform: translateY(30px);
 			}
+			.img-wrapper {
+				background: #fff;
+				border-radius: 40px;
+				padding: 20px;
+
+				img {
+					display: block;
+					margin: auto;
+					height: 150px;
+				}
+			}
+
+			&:hover{
+				border-color: var(--secondary);
+
+				.project-name{
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
 		}
 
 	}
 
-}
+	@media (max-width: 992px){
+		#projects{
+			.single-project{
+				padding: 0 20px;
+				.card {
+					.project-name {
+						opacity: 1!important;
+						transform: translateY(0)!important;
+					}
+				}
+
+			}
+		}
+	}
 </style>

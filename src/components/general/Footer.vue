@@ -8,19 +8,19 @@
 			<div class="links">
 				<ul class="list-inline my-3 font-weight-bold">
 					<li class="list-inline-item mx-4">
-						<router-link :to="{name: 'Home'}" exact>{{ $t('navbar.home') }}</router-link>
+						<router-link :to="{name: 'Home',params:{'lang':$i18n.locale}}" exact>{{ $t('navbar.home') }}</router-link>
 					</li>
 					<li class="list-inline-item mx-4">
-						<router-link :to="{name: 'About'}" exact>{{ $t('navbar.about') }}</router-link>
+						<router-link :to="{name: 'About',params:{'lang':$i18n.locale}}" exact>{{ $t('navbar.about') }}</router-link>
 					</li>
 					<li class="list-inline-item mx-4">
-						<a href="#">{{ $t('navbar.services') }}</a>
+						<router-link :to="{name: 'Services',params:{'lang':$i18n.locale}}" exact>{{ $t('navbar.services') }}</router-link>
 					</li>
 					<li class="list-inline-item mx-4">
-						<a href="#">{{ $t('navbar.projects') }}</a>
+						<router-link :to="{name: 'Projects',params:{'lang':$i18n.locale}}" exact>{{ $t('navbar.projects') }}</router-link>
 					</li>
 					<li class="list-inline-item mx-4">
-						<a href="#">{{ $t('navbar.contact') }}</a>
+						<router-link :to="{name: 'Contact',params:{'lang':$i18n.locale}}" exact>{{ $t('navbar.contact') }}</router-link>
 					</li>
 				</ul>
 			</div>
@@ -61,6 +61,10 @@
   }
 </script>
 
-<style  scoped>
-
+<style lang="scss"  scoped>
+	#footer{
+		.router-link-exact-active{
+			color: var(--secondary);
+		}
+	}
 </style>

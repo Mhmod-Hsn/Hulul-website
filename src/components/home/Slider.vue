@@ -144,7 +144,6 @@
 	background-color: white!important;
 
 	&:before{
-		content: '\f104';
 		font-weight: 700;
 		font-family: 'FontAwesome';
 		color: var(--primary);
@@ -156,10 +155,15 @@
 
 .slick-prev {
 	left: 10px;
+	&:before{
+		content: '\f104';
+	}
 }
 .slick-next{
 	right: 10px;
-	transform: rotate(180deg);
+	&:before{
+		content: '\f105';
+	}
 }
 
 
@@ -197,4 +201,42 @@
 	}
 }
 
+
+	@media (max-width: 992px) {
+		#home-slider{
+			.row{
+				flex-flow: wrap-reverse!important;
+			}
+
+			.bg-light-blue{
+				padding: 0 5%;
+			}
+			.slider-text,
+			.hero-text{
+				margin: 30px auto;
+			}
+
+			.slide-img,
+			.hero-img{
+				max-height: 30vh;
+				width: auto;
+				display: block;
+				margin: auto;
+
+			}
+			.actions{
+				width: 100%;
+				display: block;
+				text-align: center;
+			}
+
+			.slick-arrow,
+			.slick-dots{
+				display: none!important;
+			}
+			.slide-text{
+				margin: auto;
+			}
+		}
+	}
 </style>
