@@ -57,7 +57,6 @@
           "autoplay": true,
           "arrows": true,
           "fade": true,
-
         },
 	      slides:[
           {

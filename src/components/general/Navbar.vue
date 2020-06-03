@@ -1,6 +1,6 @@
 <template>
 	<b-navbar toggleable="md" type="light" variant="white" fixed="top" class="container-fluid">
-			<router-link :to="{name: 'Home'}" tag="b-navbar-brand" >
+			<router-link :to="{name: 'Home'}" class="cursor-pointer" tag="b-navbar-brand" >
 				<img src="./../../assets/Logo.png" alt="">
 			</router-link>
 
@@ -8,17 +8,17 @@
 
 			<b-collapse id="nav-collapse" is-nav>
 				<b-navbar-nav>
-					<router-link exact tag="b-nav-item" :to="{name: 'Home'}">الرئيسية</router-link>
-					<router-link exact tag="b-nav-item" :to="{name: 'About'}">عن حلول تيك</router-link>
-					<router-link exact tag="b-nav-item" :to="{name: 'About'}">خدماتنا</router-link>
-					<router-link exact tag="b-nav-item" :to="{name: 'About'}">أعمالنا</router-link>
-					<router-link exact tag="b-nav-item" :to="{name: 'About'}">اتصل بنا</router-link>
+					<router-link exact tag="b-nav-item" :to="{name: 'Home'}"> {{ $t('navbar.home') }}</router-link>
+					<router-link exact tag="b-nav-item" :to="{name: 'About'}">{{ $t('navbar.about') }}</router-link>
+					<router-link exact tag="b-nav-item" :to="{name: 'About'}">{{ $t('navbar.services') }}</router-link>
+					<router-link exact tag="b-nav-item" :to="{name: 'About'}">{{ $t('navbar.projects') }}</router-link>
+					<router-link exact tag="b-nav-item" :to="{name: 'About'}">{{ $t('navbar.contact') }}</router-link>
 				</b-navbar-nav>
 
 				<!-- Right aligned nav items -->
 				<b-navbar-nav class="ml-auto">
 					<div class="login">
-						<button class="btn btn-primary" @click="showLogin = !showLogin">تسجيل دخول</button>
+						<button class="btn btn-primary" @click="showLogin = !showLogin">{{ $t('authentication.login') }}</button>
 
 						<transition name="slide-fade-top" mode="in-out">
 							<Login v-if="showLogin"/>
@@ -31,14 +31,14 @@
 
 						<transition name="slide-fade">
 							<b-nav-form  class="ml-1" v-if="showSearch">
-								<b-form-input placeholder="كلمة البحث"></b-form-input>
+								<b-form-input :placeholder="$t('navbar.search')"></b-form-input>
 							</b-nav-form>
 						</transition>
 						</span>
 					</div>
 
 					<div class="nav-item lang-switcher">
-						<span class="nav-link h6 font-weight-bold mb-0">English</span>
+						<select-locale/>
 					</div>
 
 				</b-navbar-nav>
@@ -48,10 +48,13 @@
 
 <script>
 	import Login from './../general/Login'
+	import SelectLocale from './../general/SelectLocale'
+
 
 	export default {
 	  components:{
-	    Login
+	    Login,
+		  SelectLocale
 	  },
 		data(){
 		  return {
@@ -62,7 +65,3 @@
 		}
 	}
 </script>
-
-<style>
-
-</style>

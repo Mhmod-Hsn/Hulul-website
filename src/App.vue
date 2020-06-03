@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="ar">
+  <div id="app" :class="$i18n.locale">
     <Navbar/>
     <transition mode="out-in" name="fade" >
       <router-view />

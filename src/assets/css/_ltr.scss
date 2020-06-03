@@ -1,0 +1,12 @@
+.en,
+[dir="ltr"]{
+
+  #home-slider{
+    .slick-slide{
+      .row{
+        flex-flow: row-reverse;
+      }
+    }
+  }
+
+}

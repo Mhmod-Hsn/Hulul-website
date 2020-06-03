@@ -8,24 +8,24 @@
 			<div class="links">
 				<ul class="list-inline my-3 font-weight-bold">
 					<li class="list-inline-item mx-4">
-						<router-link :to="{name: 'Home'}" exact>الرئيسية</router-link>
+						<router-link :to="{name: 'Home'}" exact>{{ $t('navbar.home') }}</router-link>
 					</li>
 					<li class="list-inline-item mx-4">
-						<router-link :to="{name: 'About'}" exact>عن حلول تيك</router-link>
+						<router-link :to="{name: 'About'}" exact>{{ $t('navbar.about') }}</router-link>
 					</li>
 					<li class="list-inline-item mx-4">
-						<a href="#">خدماتنا</a>
+						<a href="#">{{ $t('navbar.services') }}</a>
 					</li>
 					<li class="list-inline-item mx-4">
-						<a href="#">أعمالنا</a>
+						<a href="#">{{ $t('navbar.projects') }}</a>
 					</li>
 					<li class="list-inline-item mx-4">
-						<a href="#">اتصل بنا</a>
+						<a href="#">{{ $t('navbar.contact') }}</a>
 					</li>
 				</ul>
 			</div>
 
-			<p>جميع الحقوق محفوظة لشركة حلول تيك - {{new Date().getFullYear()}} &copy;</p>
+			<p> {{$t('footer.copyrights')}} - {{new Date().getFullYear()}} &copy;</p>
 
 			<div class="social">
 				<ul class="list-inline mt-4 font-weight-bold">

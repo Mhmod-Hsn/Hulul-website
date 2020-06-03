@@ -1,0 +1,25 @@
+{
+  "website": "Hulul Tech",
+  "authentication": {
+    "login": "login",
+    "logout": "logout",
+    "register": "register"
+  },
+  "navbar": {
+    "home": "home",
+    "about": "about",
+    "services": "services",
+    "projects": "projects",
+    "contact": "contact",
+    "search": "search"
+  },
+  "footer": {
+    "home": "@:navbar.home",
+    "about": "@:navbar.about",
+    "services": "@:navbar.services",
+    "projects": "@:navbar.projects",
+    "contact": "@:navbar.contact",
+    "copyrights": "All Copyrights reserved to Hulul Tech "
+
+  }
+}

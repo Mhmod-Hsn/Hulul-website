@@ -319,7 +319,17 @@
   /*********************
       Additions
   *********************/
-//  Slick slider
+  // navbar
+  #localeSwitcher{
+    .dropdown-menu{
+      left: 0;
+      right: auto;
+    }
+  }
+
+
+
+  //  Slick slider
 
   .slick-slider{
     .slide-text{
@@ -333,5 +343,6 @@
   #hero{
     direction: rtl;
   }
+
 
 }

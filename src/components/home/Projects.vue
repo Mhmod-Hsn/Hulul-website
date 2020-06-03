@@ -8,7 +8,7 @@
 				:key="index"
 			>
 				<a :href="project.url">
-					<b-card class="bg-light-blue border-0">
+					<b-card class="bg-light-blue">
 						<div class="img-wrapper">
 							<img :src="project.img" class="img-fluid" :alt="project.name">
 						</div>
@@ -60,15 +60,27 @@
 
 <style lang="scss" scoped>
 #projects{
-	.img-wrapper{
-		background: #fff;
-		border-radius: 40px;
-		padding: 20px;
-		img{
-			display: block;
-			margin: auto;
-			height: 150px;
+	.card {
+		border: 1px solid transparent;
+		transition: all 0.3s ease-in-out;
+
+		.img-wrapper {
+			background: #fff;
+			border-radius: 40px;
+			padding: 20px;
+
+			img {
+				display: block;
+				margin: auto;
+				height: 150px;
+			}
 		}
+
+		&:hover{
+			border-color: var(--secondary);
+		}
+
 	}
+
 }
 </style>

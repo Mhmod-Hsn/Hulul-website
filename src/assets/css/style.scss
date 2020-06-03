@@ -51,6 +51,8 @@ $navbar-light-disabled-color:       rgba(map-get($theme-colors,primary), .5);
 // import bootstrap rtl
 @import "rtl";
 
+@import "ltr";
+
 /**********************
       main classes
 ***********************/

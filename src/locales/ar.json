@@ -1,0 +1,24 @@
+{
+  "website": "حلول تيك",
+  "authentication": {
+    "login": "تسجيل دخول",
+    "logout": "تسجيل خروج",
+    "register": "تسجيل"
+  },
+  "navbar": {
+    "home": "الرئيسية",
+    "about": "عن حلول تيك",
+    "services": "خدماتنا",
+    "projects": "أعمالنا",
+    "contact": "اتصل بنا",
+    "search": "بحث"
+  },
+  "footer": {
+    "home": "@:navbar.home",
+    "about": "@:navbar.about",
+    "services": "@:navbar.services",
+    "projects": "@:navbar.projects",
+    "contact": "@:navbar.contact",
+    "copyrights": "جميع الحقوق محفوظة لشركة حلول تيك"
+  }
+}
