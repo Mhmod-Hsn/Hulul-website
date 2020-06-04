@@ -52,7 +52,7 @@
 	}
 	.hero-text{
 		display: flex;
-		align-items: start;
+		align-items:  flex-start;
 		justify-content: center;
 		flex-flow: column;
 		height: 100%;

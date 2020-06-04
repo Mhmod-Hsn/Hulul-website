@@ -13,7 +13,7 @@ $theme-colors: (
   primary: #2e5888,
   secondary: #f68735,
   light-blue: #eef6ff,
-  transparent: rgba(0,0,0,0)
+  transparency: rgba(0,0,0,0)
 );
 :root{
   --primary: map-get($theme-colors,primary);
@@ -67,7 +67,7 @@ $navbar-light-disabled-color:       rgba(map-get($theme-colors,primary), .5);
 .cursor-pointer{
   cursor: pointer;
 }
-.btn:not(.btn-transparent){
+.btn:not(.btn-transparency){
   color: #fff;
 }
 
