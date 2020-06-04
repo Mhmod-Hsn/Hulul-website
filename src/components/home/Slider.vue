@@ -64,7 +64,7 @@
       slides(){
         return [
           {
-            img:require('@/static/images/slide1.png'),
+            img:require('../../static/images/slide1.png'),
             title:this.$t('slider.slide.title'),
             title2:this.$t('slider.slide.title2'),
             subtitle:this.$t('slider.slide.subtitle'),
@@ -72,7 +72,7 @@
             contactURL:'#'
           },
           {
-            img:require('@/static/images/slide2.png'),
+            img:require('../../static/images/slide2.png'),
             title:this.$t('slider.slide.title'),
             title2:this.$t('slider.slide.title2'),
             subtitle:this.$t('slider.slide.subtitle'),
